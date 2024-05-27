@@ -11,7 +11,30 @@ public class NumericTypes{
         public static final short MINSHORT =(short)(-(MAXSHORT +1));
         public static final int MININT = (int)(-(MAXINT +1));
         public static final long MINLONG = (long)(-(MAXLONG +1));
+        
+        public static short implicitCastingBytToShort(byte b){
+            if(b > MAXBYTE || b < MINBYTE)
+                throw new IllegalArgumentException("enter a number between " + MINBYTE + "and " + MAXBYTE);
+            else
+                return b;
+        }
+        
+        public static int implicitCastingShortToInt(short s){
+            if(s > MAXSHORT || s < MINSHORT)
+                throw new IllegalArgumentException("enter a number between " + MINSHORT + "and " + MAXSHORT);
+            else
+                return s;
+        }
+        
+        public static  long implicitCastingIntToLong(int i){
+            if(i > MAXINT || i < MININT)
+                throw new IllegalArgumentException("enter a number between " + MININT + "and " + MAXINT);
+            else
+                return i;
+        }
 
+
+        /*
         public static void main(String [] args){
                 System.out.println("MAXBYTE :" + MAXBYTE);
                 System.out.println("MAXSHORT :" + MAXSHORT);
@@ -22,4 +45,5 @@ public class NumericTypes{
                 System.out.println("MININT :" + MININT);
                 System.out.println("MINLONG :" + MINLONG);
         }
+    */
 }
