@@ -34,16 +34,4 @@ public class NumericTypes{
         }
 
 
-        
-        public static void main(String [] args){
-                System.out.println("MAXBYTE :" + MAXBYTE);
-                System.out.println("MAXSHORT :" + MAXSHORT);
-                System.out.println("MAXINT :" + MAXINT);
-                System.out.println("MAXLONG :" + MAXLONG);
-                System.out.println("MINBYTE :" + MINBYTE);
-                System.out.println("MINSHORT :" + MINSHORT);
-                System.out.println("MININT :" + MININT);
-                System.out.println("MINLONG :" + MINLONG);
-        }
-    
-}
+}        
