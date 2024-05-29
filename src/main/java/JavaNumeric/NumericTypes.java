@@ -1,16 +1,22 @@
 package JavaNumeric;
 public class NumericTypes{
 
+        
+        private static final double BYTE_BOUND = Math.pow(2,8*1)/2;
+        private static final double SHORT_BOUND = Math.pow(2,8*2)/2;
+        private static final double INT_BOUND = Math.pow(2, 8*4)/2;
+        private static final double LONG_BOUND = Math.pow(2,8*8)/2;
+        
     
-        public static final byte MAXBYTE =  (byte) ((Math.pow(2,8*1)/2) -1);
-        public static final short MAXSHORT =(short)((Math.pow(2,8*2)/2) -1);
-        public static final int MAXINT = (int)((Math.pow(2, 8*4)/2) -1);
-        public static final long MAXLONG = (long)((Math.pow(2,8*8)/2) -1);
+        public static final byte MAXBYTE =  (byte)(BYTE_BOUND -1);
+        public static final short MAXSHORT =(short)(SHORT_BOUND -1);
+        public static final int MAXINT = (int)(INT_BOUND -1);
+        public static final long MAXLONG = (long)(LONG_BOUND -1);
 
-        public static final byte MINBYTE = (byte)(-(MAXBYTE +1));
-        public static final short MINSHORT =(short)(-(MAXSHORT +1));
-        public static final int MININT = (int)(-(MAXINT +1));
-        public static final long MINLONG = (long)(-(MAXLONG +1));
+        public static final byte MINBYTE = (byte)(-BYTE_BOUND);
+        public static final short MINSHORT =(short)(-SHORT_BOUND);
+        public static final int MININT = (int)(-INT_BOUND);
+        public static final long MINLONG = (long)(-LONG_BOUND);
         
         public static short implicitCastingBytToShort(byte b){
             if(b > MAXBYTE || b < MINBYTE)
